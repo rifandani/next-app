@@ -7,6 +7,7 @@
     "prettier:check": "prettier --check --ignore-unknown .",
     "test": "yarn prettier:check && yarn lint",
     "dev": "next dev -p 3333",
+    "dev:debug": "NODE_OPTIONS='--inspect' next dev -p 3333",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
