@@ -1,6 +1,6 @@
 import { envSchema } from '#shared/api/env.schema';
+import { simplifyZodError } from '#shared/utils/helper';
 import 'server-only';
-import { fromZodError } from 'zod-validation-error';
 import { userApiSuccessResponseSchema } from './user.schema';
 
 export const userTags = {
@@ -22,7 +22,7 @@ export const userApi = {
 
     const user = userApiSuccessResponseSchema.safeParse(json);
     if (!user.success) {
-      return { message: fromZodError(user.error).message };
+      return simplifyZodError(user.error);
     }
 
     return user.data;

@@ -1,10 +1,10 @@
+import { APP_AUTH_COOKIE } from '#shared/constants/cookie';
 import {
   auth_routes,
   home_routes,
   private_routes,
   public_routes,
-} from '#/modules/shared/constants/routes';
-import { APP_AUTH_COOKIE } from '#shared/constants/cookie';
+} from '#shared/constants/routes';
 import { NextRequest, NextResponse } from 'next/server';
 
 export function middleware(request: NextRequest) {

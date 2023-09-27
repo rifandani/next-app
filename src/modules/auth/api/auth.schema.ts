@@ -1,4 +1,4 @@
-import { errorApiResponseSchema } from '#/modules/shared/api/error.schema';
+import { errorApiResponseSchema } from '#shared/api/error.schema';
 import { z } from 'zod';
 
 // #region SCHEMAS

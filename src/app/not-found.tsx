@@ -1,6 +1,6 @@
-import { GlobalNav } from '#/modules/shared/components/templates/global-nav';
-import { LoadingSingleSkeleton } from '#/modules/shared/components/templates/loading-single-skeleton/index.client';
 import { Boundary } from '#shared/components/molecules/boundary';
+import { GlobalNav } from '#shared/components/templates/global-nav';
+import { LoadingSingleSkeleton } from '#shared/components/templates/loading-single-skeleton/index.client';
 
 export default function RootNotFound() {
   return (

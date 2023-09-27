@@ -1,8 +1,8 @@
 import { envSchema } from '#shared/api/env.schema';
 import { APP_AUTH_COOKIE } from '#shared/constants/cookie';
+import { simplifyZodError } from '#shared/utils/helper';
 import { cookies } from 'next/headers';
 import 'server-only';
-import { fromZodError } from 'zod-validation-error';
 import { loginApiResponseSchema, loginSchema } from './auth.schema';
 
 /**
@@ -20,7 +20,7 @@ export const authApi = {
     const formDataObject = Object.fromEntries(formData);
     const payload = loginSchema.safeParse(formDataObject);
     if (!payload.success) {
-      return { message: fromZodError(payload.error).message };
+      return simplifyZodError(payload.error);
     }
 
     const response = await fetch(`${env.API_BASE_URL}/auth/login`, {
@@ -34,7 +34,7 @@ export const authApi = {
     // if `json` is not in correct `loginApiResponseSchema`, then return error object message
     const user = loginApiResponseSchema.safeParse(json);
     if (!user.success) {
-      return { message: fromZodError(user.error).message };
+      return simplifyZodError(user.error);
     }
 
     // set APP_AUTH cookies

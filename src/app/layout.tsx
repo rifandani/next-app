@@ -1,6 +1,6 @@
-import { inter, robotoMono } from '#/modules/shared/utils/fonts';
 import { ThemeProvider } from '#shared/components/providers/theme-provider';
 import { Toaster } from '#shared/components/ui/toaster';
+import { inter, robotoMono } from '#shared/utils/fonts';
 import type { Metadata } from 'next';
 import { PropsWithChildren } from 'react';
 import { twJoin } from 'tailwind-merge';

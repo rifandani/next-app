@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '#shared/utils/helper';
 import React from 'react';
 
 const Label = ({
@@ -16,7 +16,7 @@ const Label = ({
 }) => {
   return (
     <div
-      className={clsx('rounded-full px-1.5 shadow-[0_0_1px_3px_black]', {
+      className={cn('rounded-full px-1.5 shadow-[0_0_1px_3px_black]', {
         'bg-gray-800 text-gray-300': color === 'default',
         'bg-primary text-primary-foreground': color === 'primary',
         'bg-secondary text-secondary-foreground': color === 'secondary',
@@ -51,7 +51,7 @@ export const Boundary = ({
 }) => {
   return (
     <div
-      className={clsx(
+      className={cn(
         'relative rounded-lg border border-dashed',
         {
           'p-3 lg:p-5': size === 'small',
@@ -67,7 +67,7 @@ export const Boundary = ({
       )}
     >
       <div
-        className={clsx(
+        className={cn(
           'absolute -top-2.5 flex gap-x-1 text-[9px] uppercase leading-4 tracking-widest',
           {
             'left-3 lg:left-5': size === 'small',

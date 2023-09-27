@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "#/*": ["./src/*"],
+      "#app/*": ["./src/app/*"],
       "#shared/*": ["./src/modules/shared/*"],
       "#auth/*": ["./src/modules/auth/*"],
       "#home/*": ["./src/modules/home/*"],

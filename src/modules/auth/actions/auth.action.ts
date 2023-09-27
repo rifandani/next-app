@@ -1,7 +1,7 @@
 'use server';
 
-import { auth_routes, home_routes } from '#/modules/shared/constants/routes';
 import { authApi } from '#auth/api/auth.api';
+import { auth_routes, home_routes } from '#shared/constants/routes';
 import { redirect } from 'next/navigation';
 
 /**

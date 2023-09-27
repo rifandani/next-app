@@ -1,7 +1,7 @@
 'use client';
 
-import { Button } from '#/modules/shared/components/ui/button';
 import { Boundary } from '#shared/components/molecules/boundary';
+import { Button } from '#shared/components/ui/button';
 
 type Props = {
   error: Error;
@@ -18,7 +18,9 @@ export default function RootError({ error, reset }: Props) {
     >
       <div className="text-destructive">
         <h2 className="text-lg font-bold">Error</h2>
-        <p className="pb-4 pt-2 text-sm">{error?.message}</p>
+        <p className="pb-4 pt-2 text-sm">
+          {JSON.stringify(error?.message, null, 2)}
+        </p>
 
         <Button onClick={reset}>Try Again</Button>
       </div>
